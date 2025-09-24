@@ -60,13 +60,7 @@ function ThemeSwitcher() {
     localStorage.setItem(THEME_KEY, newTheme);
   };
 
-  if (!theme) {
-    return (
-      <div className="themeSwitcher" title="Carregando tema">
-        ...
-      </div>
-    );
-  }
+  if (!theme) return null;
 
   return (
     <div className="flex items-center">
@@ -82,9 +76,7 @@ function ThemeSwitcher() {
         className="themeSwitcher-label"
         title="Trocar tema"
         aria-label="Trocar tema"
-      >
-        Toggle
-      </label>
+      />
     </div >
   );
 }

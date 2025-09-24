@@ -1,3 +1,13 @@
+:root {
+  --switch-size: 40px;
+  --switch-width: var(--switch-size);
+  --switch-height: calc(var(--switch-size) / 2);
+  --switch-knob-size: calc(var(--switch-size) / 2.57);
+  --switch-knob-active-size: calc(var(--switch-size) / 2.12);
+  --switch-knob-offset: calc(var(--switch-size) / 18);
+  --switch-border-radius: calc(var(--switch-size) / 2);
+}
+
 .themeSwitcher-input[type=checkbox] {
   height: 0;
   width: 0;
@@ -6,25 +16,28 @@
 
 .themeSwitcher-label {
   cursor: pointer;
-  text-indent: -9999px;
-  width: 36px;
-  height: 18px;
+  width: var(--switch-width);
+  height: var(--switch-height);
   background: var(--theme-neutral);
   display: block;
-  border-radius: 18px;
+  border-radius: var(--switch-border-radius);
   position: relative;
 }
 
 .themeSwitcher-label:after {
-  content: '';
+  content: '☀️';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 14px;
-  height: 14px;
+  top: var(--switch-knob-offset);
+  left: var(--switch-knob-offset);
+  width: var(--switch-knob-size);
+  height: var(--switch-knob-size);
   background: var(--background);
   border-radius: 50%;
   transition: 0.3s;
+  font-size: calc(var(--switch-size) / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .themeSwitcher-input:checked+.themeSwitcher-label {
@@ -32,10 +45,11 @@
 }
 
 .themeSwitcher-input:checked+.themeSwitcher-label:after {
-  left: calc(100% - 2px);
+  left: calc(100% - var(--switch-knob-offset));
   transform: translateX(-100%);
+  content: '🌙';
 }
 
 .themeSwitcher-label:active:after {
-  width: 17px;
+  width: var(--switch-knob-active-size);
 }

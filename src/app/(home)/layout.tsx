@@ -4,7 +4,7 @@ export default function InternalLayout({ children }: { children: React.ReactNode
   return (
     <>
       {children}
-      <Footer />
+      <Footer className="mt-10" />
     </>
   );
 }

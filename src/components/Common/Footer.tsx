@@ -1,12 +1,14 @@
 import Image from "next/image";
+import { cn } from "@/utils/cn";
 
 type FooterProps = {
   simple?: boolean;
+  className?: string;
 };
 
-export default function Footer({ simple = false }: FooterProps) {
+export default function Footer({ simple = false, className }: FooterProps) {
   return (
-    <footer className="container mx-auto">
+    <footer className={cn("container mx-auto", className)}>
       {!simple && (
         <div className="w-full py-10 px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="flex-1 lg:flex-2">

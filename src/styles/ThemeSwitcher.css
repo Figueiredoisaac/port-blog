@@ -1,0 +1,41 @@
+.themeSwitcher-input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.themeSwitcher-label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 36px;
+  height: 18px;
+  background: var(--theme-neutral);
+  display: block;
+  border-radius: 18px;
+  position: relative;
+}
+
+.themeSwitcher-label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--background);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.themeSwitcher-input:checked+.themeSwitcher-label {
+  background: var(--theme-secondary);
+}
+
+.themeSwitcher-input:checked+.themeSwitcher-label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.themeSwitcher-label:active:after {
+  width: 17px;
+}

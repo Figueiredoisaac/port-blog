@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     default: "Fernanda Mascheti",
   },
   description: "Eu ensino sobre programação e tecnologia",
+  /* openGraph: {
+    images: "/opengraph-image.png",
+  }, */
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL}`,
+  },
 };
 
 export default function RootLayout({

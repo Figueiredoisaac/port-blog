@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/utils/cn";
@@ -53,7 +52,7 @@ function BlogHeader() {
   }
 
   return (
-    <header className="w-full flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center lg:justify-between py-4">
+    <header className="w-full flex flex-col gap-2 lg:gap-0 lg:flex-row lg:items-center lg:justify-between min-h-10 py-4">
       <div
         className="scroll-mt-[100px] flex flex-col lg:flex-row lg:items-center lg:gap-4 w-full min-h-10"
         id="blog"
@@ -63,7 +62,7 @@ function BlogHeader() {
         </span>
         <form
           className={cn(
-            "relative w-full lg:w-64 transition-all duration-200",
+            "relative w-full lg:w-64",
             expandCategories && "lg:w-0 overflow-hidden",
           )}
           onSubmit={async (e) => {
@@ -75,7 +74,7 @@ function BlogHeader() {
         >
           <input
             type="text"
-            name="search"
+            name="s"
             placeholder="Buscar..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

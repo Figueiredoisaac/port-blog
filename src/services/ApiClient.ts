@@ -17,7 +17,7 @@ type TagPagination = Pagination & {
   tag: string;
 };
 
-const API_BASE_URL = "https://nextjs-alura-teste.vercel.app/api/posts";
+const API_BASE_URL = process.env.API_BASE_URL;
 const DEFAULT_REVALIDATE = 300;
 
 type CacheOptions = {

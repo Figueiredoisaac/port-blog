@@ -53,7 +53,7 @@ async function BlogWrapper({ page, category, tag, s }: SearchParams) {
     <div className="flex flex-col container px-3 mx-auto space-y-8">
       <BlogHeader />
       <BlogList posts={posts} />
-      <BlogPagination pagination={pagination} />
+      {posts.length > 0 && <BlogPagination pagination={pagination} />}
     </div>
   );
 }

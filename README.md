@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Port-Blog — Blog Pessoal
 
-## Getting Started
+Este projeto é um blog pessoal desenvolvido como parte do desafio técnico para Pessoa Desenvolvedora Frontend da Alura. O objetivo é demonstrar habilidades em Next.js, TypeScript, Tailwind, boas práticas de desenvolvimento, SEO e acessibilidade, seguindo fielmente o design fornecido no Figma.
+## Sobre o Projeto
 
-First, run the development server:
+O Port-Blog é uma aplicação que exibe uma listagem de postagens, permite pesquisa, filtragem por categorias, paginação, visualização de detalhes e sugestões de postagens relacionadas. O layout é totalmente responsivo e conta com tema claro/escuro.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> **Observação:** O arquivo `.env` está sendo enviado propositalmente junto ao projeto para facilitar o teste e execução local, eliminando a necessidade de configuração manual das variáveis de ambiente.
+## Etapas para Gerar o Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone o repositório:**
+	```bash
+	git clone https://github.com/Figueiredoisaac/port-blog.git
+	cd port-blog
+	```
+2. **Instale as dependências:**
+	```bash
+	npm install
+	# ou
+	yarn install
+	# ou
+	pnpm install
+	# ou
+	bun install
+	```
+3. **Execute o servidor de desenvolvimento:**
+	```bash
+	npm run dev
+	# ou
+	yarn dev
+	# ou
+	pnpm dev
+	# ou
+	bun dev
+	```
+4. **Acesse:** [http://localhost:3000](http://localhost:3000)
+## Documentação Geral
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Página inicial:** Listagem dinâmica das postagens consumidas da [API fake](https://nextjs-alura-teste.vercel.app/).
+- **Filtros:** Pesquisa por palavra-chave(titulo e conteúdo) e filtragem por categorias.
+- **Paginação:** Exibição de 6 postagens por página.
+- **Detalhes da postagem:** Título, categorias, tags, descrição e postagens relacionadas.
+- **Responsividade:** Layout adaptado para desktop, tablet e mobile.
+- **Componentização:** Componentes reutilizáveis para facilitar manutenção e escalabilidade.
+- **SEO:** Tags otimizadas para motores de busca.
+- **Acessibilidade:** Práticas para garantir navegação inclusiva.
+- **Tema claro/escuro:** Alternância de tema como diferencial.
+## Requisitos do Case e Como Foram Atendidos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Requisito | Como foi atendido |
+|-----------|-------------------|
+| Next.js 15 com App Router | Utilizado na estrutura do projeto |
+| TypeScript com tipagem segura | Todo o código é escrito em TypeScript |
+| Tailwind 4 para estilização | Estilização feita com Tailwind 4 |
+| Consumir API fake | Integração com [API fake](https://nextjs-alura-teste.vercel.app/) |
+| Boas práticas de SEO | Tags e metadados otimizados |
+| Boas práticas de acessibilidade | Uso de atributos ARIA, navegação por teclado, contraste |
+| Fidelidade ao Figma | Layout e componentes seguem o design fornecido |
+| Layout 100% responsivo | Testado em diferentes dispositivos |
+| Performance | Carregamento rápido e otimizações |
+| Componentização | Estrutura modular e reutilizável |
+| Tema claro/escuro | Implementado como diferencial |
 
-## Learn More
+## Referências
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/docs)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [API Fake](https://nextjs-alura-teste.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
+Projeto desenvolvido para o desafio técnico da Alura.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

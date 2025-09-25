@@ -10,7 +10,7 @@ function BlogPost({ post }: { post: PostType }) {
       title={post.title}
       aria-label={`Ler mais sobre ${post.title}`}
     >
-      <article className="flex flex-col justify-between min-h-full p-6 border border-secondary rounded-l-sm hover:shadow-[0_4px_44px_0_rgba(28,167,200,0.3)] transition duration-300">
+      <article className="flex flex-col justify-between bg-white dark:bg-gray-900 min-h-full p-6 border border-secondary rounded-l-sm hover:shadow-[0_4px_44px_0_rgba(28,167,200,0.3)] transition duration-300">
         <div className="space-y-[26px]">
           <div className="relative">
             <Image

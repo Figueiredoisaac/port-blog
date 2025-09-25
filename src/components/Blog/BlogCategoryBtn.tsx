@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { CategoryType } from "@/types/PostType";
-import { cn } from "@/utils/cn";
 
 type PropsCategory = {
   cat: CategoryType;

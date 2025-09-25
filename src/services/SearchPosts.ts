@@ -10,7 +10,13 @@ export async function getAllPosts(): Promise<PostType[]> {
   const perPage = 9;
 
   while (hasNextPage) {
-    const data = await getPosts({ page: currentPage, limit: perPage });
+    const data = await getPosts({
+      page: currentPage,
+      limit: perPage,
+    }, {
+      cache: "force-cache",
+      revalidate: 60 * 60 * 24,
+    });
 
     allPosts = [...allPosts, ...data.posts];
     hasNextPage = data.pagination.hasNextPage;

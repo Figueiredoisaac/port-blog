@@ -1,13 +1,9 @@
 import Image from "next/image";
 
-export default function BgGradient({
-  className,
-}: {
-  className?: string;
-}) {
+export default function BgGradient({ className }: { className?: string }) {
   return (
     <Image
-      src="/bg-colors.webp"
+      src="/bg-colors.png"
       alt="Gradient Background"
       width={1355}
       height={1173}

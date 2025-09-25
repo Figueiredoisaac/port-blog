@@ -9,7 +9,7 @@ export default function Avatar() {
         width={224}
         height={224}
         className="min-h-[224px] min-w-[224px]"
-        priority
+        fetchPriority="high"
       />
     </div>
   );

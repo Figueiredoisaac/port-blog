@@ -5,6 +5,10 @@ type Pagination = {
   limit: number;
 };
 
+type SearchPagination = Pagination & {
+  search?: string;
+};
+
 type CategoryPagination = Pagination & {
   category: string;
 };
@@ -13,23 +17,23 @@ type TagPagination = Pagination & {
   tag: string;
 };
 
-const API_BASE_URL = "https://nextjs-alura-teste.vercel.app/api";
-const DEFAULT_REVALIDATE = 60;
+const API_BASE_URL = "https://nextjs-alura-teste.vercel.app/api/posts";
+const DEFAULT_REVALIDATE = 300;
 
 type CacheOptions = {
-  cache?: 'force-cache' | 'no-store';
+  cache?: "force-cache" | "no-store";
   revalidate?: number;
 };
 
 const apiFetch = async (url: string, options: CacheOptions = {}) => {
-  const { cache = 'force-cache', revalidate = DEFAULT_REVALIDATE } = options;
+  const { cache = "force-cache", revalidate = DEFAULT_REVALIDATE } = options;
 
   const fetchOptions: RequestInit = {
     cache,
   };
 
   // Só adiciona revalidate se cache for 'force-cache'
-  if (cache === 'force-cache') {
+  if (cache === "force-cache") {
     fetchOptions.next = { revalidate };
   }
 
@@ -43,18 +47,18 @@ const apiFetch = async (url: string, options: CacheOptions = {}) => {
 };
 
 export const getPosts = async (
-  { page, limit }: Pagination = { page: 1, limit: 6 },
+  { page, limit, search }: SearchPagination = { page: 1, limit: 6 },
   options: CacheOptions = {},
 ) => {
-  const url = `${API_BASE_URL}/posts?page=${page}&limit=${limit}`;
+  let url = `${API_BASE_URL}?page=${page}&limit=${limit}`;
+  if (search) {
+    url += `&search=${encodeURIComponent(search)}`;
+  }
   return apiFetch(url, options);
 };
 
-export const getPostById = async (
-  id: string,
-  options: CacheOptions = {},
-) => {
-  const url = `${API_BASE_URL}/posts/id/${id}`;
+export const getPostById = async (id: string, options: CacheOptions = {}) => {
+  const url = `${API_BASE_URL}/id/${id}`;
   return apiFetch(url, options);
 };
 
@@ -70,6 +74,6 @@ export const getPostsByCategory = async (
   { category, page = 1, limit = 6 }: CategoryPagination,
   options: CacheOptions = {},
 ) => {
-  const url = `${API_BASE_URL}/categories/${category}?page=${page}&limit=${limit}`;
+  const url = `${API_BASE_URL}/category/${category}?page=${page}&limit=${limit}`;
   return apiFetch(url, options);
 };

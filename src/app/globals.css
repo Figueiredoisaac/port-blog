@@ -25,6 +25,10 @@
   --font-title: "Chakra Petch", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--color-neutral);

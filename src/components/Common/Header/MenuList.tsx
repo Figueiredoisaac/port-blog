@@ -2,7 +2,7 @@ import MenuItem from "./MenuItem";
 
 const links = [
   { href: "/", label: "Início" },
-  { href: "/blog", label: "Blog" },
+  { href: "/#blog", label: "Blog" },
 ];
 
 export default function MenuList() {
@@ -16,4 +16,3 @@ export default function MenuList() {
     </nav>
   );
 }
-

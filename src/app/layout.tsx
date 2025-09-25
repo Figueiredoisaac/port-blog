@@ -4,20 +4,20 @@ import "./globals.css";
 import Header from "@/components/Common/Header";
 
 const chakraPetch = Chakra_Petch({
-  variable: '--font-chakra-petch',
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-})
+  variable: "--font-chakra-petch",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Fernanda Mascheti',
-    default: 'Fernanda Mascheti',
+    template: "%s | Fernanda Mascheti",
+    default: "Fernanda Mascheti",
   },
   description: "Eu ensino sobre programação e tecnologia",
 };
@@ -29,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${chakraPetch.variable} ${inter.variable} antialiased scroll-smooth`}
-      >
+      <body className={`${chakraPetch.variable} ${inter.variable} antialiased`}>
         <Header />
         {children}
       </body>

@@ -45,6 +45,7 @@ O Port-Blog é uma aplicação que exibe uma listagem de postagens, permite pesq
 - **SEO:** Tags otimizadas para motores de busca.
 - **Acessibilidade:** Práticas para garantir navegação inclusiva.
 - **Tema claro/escuro:** Alternância de tema como diferencial.
+
 ## Requisitos do Case e Como Foram Atendidos
 
 | Requisito | Como foi atendido |
@@ -60,6 +61,17 @@ O Port-Blog é uma aplicação que exibe uma listagem de postagens, permite pesq
 | Performance | Carregamento rápido e otimizações |
 | Componentização | Estrutura modular e reutilizável |
 | Tema claro/escuro | Implementado como diferencial |
+
+## Performance e Qualidade
+
+O projeto foi avaliado com **96 pontos** no **Google Lighthouse**, demonstrando excelente performance, acessibilidade, práticas recomendadas e SEO:
+
+![Lighthouse Performance Results](public\diagnostic.png)
+
+- **Performance: 96** - Carregamento otimizado e rápido
+- **Acessibilidade: 96** - Navegação inclusiva e acessível
+- **Práticas Recomendadas: 100** - Seguindo melhores práticas de desenvolvimento
+- **SEO: 100** - Otimização completa para motores de busca
 
 ## Referências
 

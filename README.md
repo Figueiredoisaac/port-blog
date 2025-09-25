@@ -1,6 +1,9 @@
 # Port-Blog — Blog Pessoal
 
 Este projeto é um blog pessoal desenvolvido como parte do desafio técnico para Pessoa Desenvolvedora Frontend da Alura. O objetivo é demonstrar habilidades em Next.js, TypeScript, Tailwind, boas práticas de desenvolvimento, SEO e acessibilidade, seguindo fielmente o design fornecido no Figma.
+
+Preview: https://isaac-alura-blog.vercel.app/
+
 ## Sobre o Projeto
 
 O Port-Blog é uma aplicação que exibe uma listagem de postagens, permite pesquisa, filtragem por categorias, paginação, visualização de detalhes e sugestões de postagens relacionadas. O layout é totalmente responsivo e conta com tema claro/escuro.
@@ -66,7 +69,7 @@ O Port-Blog é uma aplicação que exibe uma listagem de postagens, permite pesq
 
 O projeto foi avaliado com **96 pontos** no **Google Lighthouse**, demonstrando excelente performance, acessibilidade, práticas recomendadas e SEO:
 
-![Lighthouse Performance Results](public\diagnostic.png)
+![Lighthouse Performance Results](/public/diagnostic.png)
 
 - **Performance: 96** - Carregamento otimizado e rápido
 - **Acessibilidade: 96** - Navegação inclusiva e acessível

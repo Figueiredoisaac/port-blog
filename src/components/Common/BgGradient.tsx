@@ -1,14 +1,15 @@
 import Image from "next/image";
+import { cn } from "@/utils/cn";
 
 export default function BgGradient({ className }: { className?: string }) {
   return (
     <Image
-      src="/bg-colors.png"
+      src="/bg-colors.svg"
       alt="Gradient Background"
-      width={1355}
-      height={1173}
+      width={412}
+      height={770}
       className={className}
-      priority
+      fetchPriority="high"
     />
   );
 }
